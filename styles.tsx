@@ -3,21 +3,55 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#233',
+    padding: 10,
     justifyContent: 'center',
   },
-  heading1:{
-    color:"#000",
-    fontWeight:"bold",
-    fontSize:30,
-    margin:20
+  header1: {
+    fontSize: 46,
+    fontWeight: '600',
+    color: '#0fd',
+    textAlign: 'center',
+    paddingVertical: 20,
+    marginBottom: 20,
+    fontFamily: 'serif',
+    fontStyle: 'italic',
   },
-  heading2:{
-    color:"#000",
-    margin:5,
-    fontWeight:"bold",
-    fontSize:15
+  header2: {
+    marginTop: -40,
+    fontSize: 22,
+    textAlign: 'center',
+    color: 'white',
+    paddingVertical: 20,
+    fontFamily: 'sans-serif-light',
   },
-  });
+  infoText: {
+    marginBottom: 30,
+    marginTop: -20,
+    marginLeft: 10,
+    fontSize: 22,
+    textAlign: 'left',
+    color: 'white',
+    paddingVertical: 20,
+    fontFamily: 'sans-serif-light',
+  },
+  closeButtonArea: {
+    position: "absolute",
+    top: 25,
+    right: 5,
+    height: 80,
+    width: 80,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "transparent",
+  },
+  closeButton: {
+    height: 50,
+    width: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    fontSize: 50,
+    color: '#677'
+  },
+});
   export default styles;
