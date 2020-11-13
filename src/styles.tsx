@@ -53,5 +53,20 @@ const styles = StyleSheet.create({
     fontSize: 50,
     color: '#677'
   },
+  customBtnText: {
+    fontSize: 22,
+    color: "#fff",
+    marginTop: -20,
+    marginLeft: -10,
+    textAlign: 'left',
+    paddingVertical: 20,
+    fontFamily: 'sans-serif-light',
+  },
+  customBtnBG: {
+    backgroundColor: "#233",
+    paddingHorizontal: 20,
+    paddingVertical: 5,
+    borderRadius: 10
+  }
 });
   export default styles;

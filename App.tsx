@@ -3,9 +3,9 @@ import { SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import React, {useState } from 'react';
 import NetInfo from '@react-native-community/netinfo';
 import { Entypo, Ionicons, MaterialIcons } from '@expo/vector-icons';
-import * as WebBrowser from 'expo-web-browser';
-import styles from "./styles";
+import styles from "./src/styles";
 import IpButton from './src/IP_Button';
+import PublicIp from './src/PublicIp';
 
 export default function App () {
 
@@ -24,6 +24,8 @@ export default function App () {
       setIsConnected(state.isConnected);
     });
   }
+
+  const public_ip = PublicIp();
 
   const StartScreen = () => {
     getNetInfo();
@@ -44,10 +46,6 @@ export default function App () {
     );
   }
 
-  const handleOpenWebBrowser = () => {
-    WebBrowser.openBrowserAsync('https://www.whatismyip.com/my-ip-information/?iref=homegb')
-  };
-
   const InfoScreen = () => {
     getNetInfo();
     return(
@@ -55,6 +53,7 @@ export default function App () {
         <TouchableOpacity onPress={toggleInfoScreen} style={styles.closeButtonArea}>
           <Ionicons name="md-close-circle" style={styles.closeButton}></Ionicons>
         </TouchableOpacity>
+
         <Entypo name="network" size={55} color="#0fd" />
         <Text style={styles.infoText}>Connection type: {type}</Text>
         <MaterialIcons name="network-check" size={55} color="#0fd" />
@@ -62,7 +61,8 @@ export default function App () {
         <Entypo name="address" size={55} color="#0fd" />
         <Text style={styles.infoText}>IP address: {ip}</Text>
         <MaterialIcons name="public" size={55} color="#0fd" />
-        <IpButton onPress={handleOpenWebBrowser}/>
+        <PublicIp/>
+        <IpButton/>
       </View>
     );
   }
