@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
     color: '#677'
   },
   customBtnText: {
-    fontSize: 22,
-    color: "#fff",
-    marginTop: -20,
+    fontSize: 20,
+    color: "#777",
+    marginTop: -55,
     marginLeft: -10,
     textAlign: 'left',
     paddingVertical: 20,

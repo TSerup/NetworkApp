@@ -25,8 +25,6 @@ export default function App () {
     });
   }
 
-  const public_ip = PublicIp();
-
   const StartScreen = () => {
     getNetInfo();
     let str = "Device is not connected to any network!"
@@ -59,7 +57,7 @@ export default function App () {
         <MaterialIcons name="network-check" size={55} color="#0fd" />
         <Text style={styles.infoText}>Network strength: {strength}</Text>
         <Entypo name="address" size={55} color="#0fd" />
-        <Text style={styles.infoText}>IP address: {ip}</Text>
+        <Text style={styles.infoText}>Local IP: {ip}</Text>
         <MaterialIcons name="public" size={55} color="#0fd" />
         <PublicIp/>
         <IpButton/>
